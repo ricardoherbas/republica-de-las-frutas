@@ -10,21 +10,23 @@ body {
 .contenedor {
     display: flex;
     gap: 20px; /* espacio entre cuadros */
+    flex-wrap: wrap; /* permite que se acomoden si no hay espacio */
 }
 
 .cuadro {
-    width: 300px;
-    height: 300px;
-    border: 3px solid #333;
+    width: 200px; /* más chico */
+    height: 200px;
+    border: 2px solid #333;
     background-color: white;
     display: flex;
     justify-content: center;
     align-items: center;
     overflow: hidden;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.2); /* opcional: sombra suave */
 }
 
 .cuadro img {
-    max-width: 100%;
-    max-height: 100%;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
 }
