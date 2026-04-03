@@ -1,32 +1,93 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column; /* organiza en columna */
+    justify-content: flex-start; /* arranca desde arriba */
+    align-items: center; /* centra horizontalmente */
+    min-height: 100vh;
+    margin: 0;
+    background-color: #32fc5e;
+}
+
+.contenedorLogo {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    margin: 30px 0; /* espacio arriba y abajo del logo */
+}
+
+.contenedorLogo img {
+    max-width: 250px;
+    height: auto;
+    background-color: yellow;
 }
 
 .contenedor {
     display: flex;
     gap: 20px; /* espacio entre cuadros */
-    flex-wrap: wrap; /* permite que se acomoden si no hay espacio */
+    justify-content: center; /* centra los cuadros en la fila */
 }
 
 .cuadro {
-    width: 200px; /* más chico */
-    height: 200px;
+    width: 200px;
     border: 2px solid #333;
     background-color: white;
     display: flex;
-    justify-content: center;
+    flex-direction: column; /* organiza imagen arriba y texto abajo */
+    justify-content: flex-start;
     align-items: center;
     overflow: hidden;
-    box-shadow: 2px 2px 5px rgba(0,0,0,0.2); /* opcional: sombra suave */
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+    padding: 10px;
 }
 
 .cuadro img {
     width: 100%;
-    height: 100%;
+    height: auto; /* la imagen se adapta */
     object-fit: cover;
+}
+
+.cuadro h2 {
+    margin-top: 10px;
+    font-size: 18px;
+    color: #333;
+    text-align: center;
+}
+
+.contenedorf {
+    display: flex;          /* organiza en fila */
+    gap: 20px;              /* espacio entre cuadros */
+    justify-content: center;/* centra horizontalmente */
+    flex-wrap: wrap;        /* si no entran todos, pasan a otra línea */
+}
+
+.cuadrof {
+    width: 180px;
+    border: 2px solid #333;
+    background-color: white;
+    display: flex;
+    flex-direction: column; /* nombre arriba, imagen en medio, precio abajo */
+    align-items: center;
+    padding: 10px;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+    text-align: center;
+}
+
+.cuadrof img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    margin: 10px 0;
+}
+
+.cuadrof h2 {
+    font-size: 18px;
+    margin: 0;
+    color: #333;
+}
+
+.cuadrof p {
+    font-size: 14px;
+    color: #555;
+    margin: 5px 0 0 0;
 }
