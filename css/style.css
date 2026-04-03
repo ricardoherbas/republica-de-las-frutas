@@ -75,8 +75,8 @@ body {
 
 .cuadrof img {
     width: 100%;
-    height: auto;
-    object-fit: cover;
+    height: 150px;       /* altura fija para todas las frutas */
+    object-fit: cover;   /* recorta y ajusta la imagen sin deformarla */
     margin: 10px 0;
 }
 
