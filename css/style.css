@@ -104,8 +104,8 @@ body {
     }
 
     .cuadrof img {
-        width: 120px;   /* más chico en celu */
-        height: 120px;
+        width: 100px;   /* más chico en celu */
+        height: 100px;
     }
 
     .cuadro h2, .cuadrof h2 {
