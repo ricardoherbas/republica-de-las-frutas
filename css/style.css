@@ -91,3 +91,26 @@ body {
     color: #555;
     margin: 5px 0 0 0;
 }
+/* Pantallas pequeñas (celulares) */
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+
+    .cuadro, .cuadrof {
+        width: 100%;             /* ocupan todo el ancho disponible */
+        margin-bottom: 20px;     /* espacio entre cuadros */
+    }
+
+    .cuadro h2, .cuadrof h2 {
+        font-size: 16px;         /* texto más chico para móviles */
+    }
+
+    .cuadrof p {
+        font-size: 12px;
+    }
+
+    .contenedorLogo img {
+        max-width: 180px;        /* logo más chico en celulares */
+    }
+}
