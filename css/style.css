@@ -61,7 +61,8 @@ body {
     grid-template-columns: repeat(5, 1fr); /* siempre 5 columnas */
     column-gap: 20px; /* espacio horizontal */
     row-gap: 30px;    /* espacio vertical */
-    padding: 20px;    /* espacio interno para que no quede pegado al borde */
+    padding: 20px;    /* espacio interno */
+    grid-auto-rows: 280px; /* altura uniforme para todas las filas */
 }
 
 .cuadrof {
@@ -71,6 +72,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-between; /* reparte contenido dentro */
     padding: 10px;
     box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
     text-align: center;
