@@ -121,10 +121,5 @@ body {
         max-width: 180px;
     }
 
-    .contenedorf {
-        display: grid;
-        grid-template-columns: repeat(5, 1fr);
-        gap: 40px;          /* mismo espacio horizontal y vertical */
-        padding: 10px;
-    }
+ 
 }
