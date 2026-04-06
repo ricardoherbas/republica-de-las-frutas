@@ -119,7 +119,7 @@ body {
         width: 150px;
         height: 150px;
     }
-    contenedorf {
+    .contenedorf {
         gap: 40px;          /* mismo espacio horizontal y vertical */
         padding: 10px;
     }
