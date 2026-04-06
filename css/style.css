@@ -55,15 +55,16 @@ body {
     text-align: center;
 }
 
+/* --- Aquí cambiamos a GRID para 5 columnas fijas --- */
 .contenedorf {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* siempre 5 columnas */
     gap: 20px;
-    justify-content: center;
+    justify-items: center;
 }
 
 .cuadrof {
-    flex: 1 1 calc(20% - 20px); /* 5 columnas en desktop */
+    width: 100%;
     max-width: 200px;
     border: 2px solid #333;
     background-color: white;
@@ -95,24 +96,10 @@ body {
 }
 
 /* --- Responsive --- */
-
-/* Elimina las reglas que cambian columnas en tablets y celulares */
-@media (max-width: 768px) {
-    .cuadrof {
-        flex: 1 1 calc(20% - 20px); /* Mantener 5 columnas */
-        max-width: 200px;
-    }
-}
-
+/* Mantener siempre 5 columnas, solo ajustar tamaños */
 @media (max-width: 480px) {
     body {
         padding: 10px;
-    }
-
-    .cuadro, .cuadrof {
-        flex: 1 1 calc(20% - 20px); /* Mantener 5 columnas */
-        max-width: 200px;
-        margin-bottom: 20px;
     }
 
     .cuadro h2, .cuadrof h2 {
