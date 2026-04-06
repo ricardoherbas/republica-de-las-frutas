@@ -62,7 +62,8 @@ body {
 }
 
 .cuadrof {
-    width: 180px;
+    flex: 1 1 calc(20% - 20px); /* 👈 5 columnas en desktop */
+    max-width: 200px;
     border: 2px solid #333;
     background-color: white;
     display: flex;
@@ -91,19 +92,31 @@ body {
     color: #555;
     margin: 5px 0 0 0;
 }
-/* Pantallas pequeñas (celulares) */
+
+/* --- Responsive --- */
+
+/* Tablets: 3 columnas */
+@media (max-width: 768px) {
+    .cuadrof {
+        flex: 1 1 calc(33.3% - 20px);
+        max-width: none;
+    }
+}
+
+/* Celulares: 1 columna */
 @media (max-width: 480px) {
     body {
         padding: 10px;
     }
 
     .cuadro, .cuadrof {
-        width: 100%;             /* ocupan todo el ancho disponible */
-        margin-bottom: 20px;     /* espacio entre cuadros */
+        flex: 1 1 100%;
+        max-width: none;
+        margin-bottom: 20px;
     }
 
     .cuadro h2, .cuadrof h2 {
-        font-size: 16px;         /* texto más chico para móviles */
+        font-size: 16px;
     }
 
     .cuadrof p {
@@ -111,6 +124,6 @@ body {
     }
 
     .contenedorLogo img {
-        max-width: 180px;        /* logo más chico en celulares */
+        max-width: 180px;
     }
 }
