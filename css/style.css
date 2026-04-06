@@ -55,11 +55,13 @@ body {
     text-align: center;
 }
 
-/* --- Aquí cambiamos a GRID para 5 columnas fijas --- */
+/* --- GRID para 5 columnas fijas --- */
 .contenedorf {
     display: grid;
     grid-template-columns: repeat(5, 1fr); /* siempre 5 columnas */
-    gap: 20px;
+    column-gap: 20px; /* espacio horizontal */
+    row-gap: 30px;    /* espacio vertical */
+    padding: 20px;    /* espacio interno para que no quede pegado al borde */
 }
 
 .cuadrof {
@@ -94,7 +96,6 @@ body {
 }
 
 /* --- Responsive --- */
-/* Mantener siempre 5 columnas, solo ajustar tamaños */
 @media (max-width: 480px) {
     body {
         padding: 10px;
