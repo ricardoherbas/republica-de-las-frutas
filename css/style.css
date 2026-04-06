@@ -1,9 +1,9 @@
 body {
     font-family: Arial, sans-serif;
     display: flex;
-    flex-direction: column; /* organiza en columna */
-    justify-content: flex-start; /* arranca desde arriba */
-    align-items: center; /* centra horizontalmente */
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
     min-height: 100vh;
     margin: 0;
     background-color: #32fc5e;
@@ -13,7 +13,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 30px 0; /* espacio arriba y abajo del logo */
+    margin: 30px 0;
 }
 
 .contenedorLogo img {
@@ -24,17 +24,18 @@ body {
 
 .contenedor {
     display: flex;
-    gap: 20px; /* espacio entre cuadros */
-    justify-content: center; /* centra los cuadros en la fila */
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 .cuadro {
-    width: 200px;
+    flex: 1 1 200px; /* se adapta, mínimo 200px */
+    max-width: 250px;
     border: 2px solid #333;
     background-color: white;
     display: flex;
-    flex-direction: column; /* organiza imagen arriba y texto abajo */
-    justify-content: flex-start;
+    flex-direction: column;
     align-items: center;
     overflow: hidden;
     box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
@@ -43,7 +44,7 @@ body {
 
 .cuadro img {
     width: 100%;
-    height: auto; /* la imagen se adapta */
+    height: auto;
     object-fit: cover;
 }
 
@@ -55,19 +56,19 @@ body {
 }
 
 .contenedorf {
-    display: flex;          /* organiza en fila */
-    gap: 20px;              /* espacio entre cuadros */
-    justify-content: center;/* centra horizontalmente */
-    flex-wrap: wrap;        /* si no entran todos, pasan a otra línea */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
 }
 
 .cuadrof {
-    flex: 1 1 calc(20% - 20px); /* 👈 5 columnas en desktop */
+    flex: 1 1 calc(20% - 20px); /* 5 columnas en desktop */
     max-width: 200px;
     border: 2px solid #333;
     background-color: white;
     display: flex;
-    flex-direction: column; /* nombre arriba, imagen en medio, precio abajo */
+    flex-direction: column;
     align-items: center;
     padding: 10px;
     box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
@@ -76,8 +77,8 @@ body {
 
 .cuadrof img {
     width: 100%;
-    height: 150px;       /* altura fija para todas las frutas */
-    object-fit: cover;   /* recorta y ajusta la imagen sin deformarla */
+    height: 150px;
+    object-fit: cover;
     margin: 10px 0;
 }
 
