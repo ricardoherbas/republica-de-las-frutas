@@ -59,32 +59,31 @@ body {
 .contenedorf {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    column-gap: 20px;
-    row-gap: 30px;
+    column-gap: 20px; /* espacio horizontal */
+    row-gap: 40px;    /* espacio vertical entre filas */
     padding: 20px;
     grid-auto-rows: 280px; /* altura uniforme */
 }
 
 .cuadrof {
     width: 100%;
-    height: 100%; /* ocupa toda la altura de la celda */
+    height: 100%;
     border: 2px solid #333;
     background-color: white;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between; /* reparte contenido dentro */
+    justify-content: space-between;
     padding: 10px;
     box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
     text-align: center;
 }
 
-/* Normalizar imágenes */
 .cuadrof img {
     width: 100%;
-    height: 150px;       /* altura fija */
-    object-fit: cover;   /* recorta proporcionalmente */
-    margin: 10px 0;
+    height: 150px;
+    object-fit: cover;
+    margin-bottom: 10px; /* espacio debajo de la imagen */
 }
 
 .cuadrof h2 {
