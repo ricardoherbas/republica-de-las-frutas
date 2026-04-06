@@ -120,6 +120,8 @@ body {
         height: 150px;
     }
     .contenedorf {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
         gap: 40px;          /* mismo espacio horizontal y vertical */
         padding: 10px;
     }
