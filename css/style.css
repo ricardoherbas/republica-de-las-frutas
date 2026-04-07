@@ -101,15 +101,7 @@ body {
     .contenedorf {
     
         grid-auto-rows: 150px; /* filas más bajas */
-        gap: 10px;             /* menos espacio entre cuadros */
+        gap: 4px;             /* menos espacio entre cuadros */
     }
 
-
-    .cuadrof h2 {
-        font-size: 12px;
-    }
-
-    .cuadrof p {
-        font-size: 10px;
-    }
 }
