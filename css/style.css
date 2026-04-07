@@ -17,94 +17,91 @@ body {
 }
 
 .contenedorLogo img {
-    max-width: 250px;
+    max-width: 25%;   /* proporcional */
     height: auto;
     background-color: yellow;
 }
-
 .contenedor {
     display: flex;
+    justify-content: center;   /* centra horizontalmente */
+    align-items: center;       /* centra verticalmente */
     gap: 20px;
-    justify-content: center;
-    flex-wrap: wrap;
+    flex-wrap: wrap;           /* permite que se acomoden si no entran */
 }
 
 .cuadro {
-    flex: 1 1 200px;
-    max-width: 250px;
-    border: 2px solid #333;
-    background-color: white;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    overflow: hidden;
-    box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+    flex: 0 0 30%;             /* cada cuadro ocupa el 30% del ancho */
+    max-width: 300px;          /* límite máximo */
+    box-sizing: border-box;
+    text-align: center;
     padding: 10px;
+    border: 2px solid #333;
 }
 
 .cuadro img {
-    width: 200px;
-    height: 200px;
-    object-fit: cover;
+    width: 100%;               /* ocupa todo el ancho del cuadro */
+    height: auto;              /* mantiene proporción */
+    object-fit: contain;       /* evita deformaciones */
 }
-
-.cuadro h2 {
-    margin-top: 10px;
-    font-size: 18px;
-    color: #333;
-    text-align: center;
-}
-
-/* --- GRID para 5 columnas fijas --- */
 .contenedorf {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 2%;              /* espacio relativo */
-    padding: 1%;          /* padding relativo */
-    grid-auto-rows: auto; /* altura automática */
+    display: flex;
+    flex-wrap: wrap;          /* permite que los cuadros se acomoden */
+    justify-content: center;  /* centra las columnas */
+    gap: 2%;                  /* espacio relativo */
+    width: 100%;              /* ocupa todo el ancho disponible */
+    box-sizing: border-box;
 }
 
 .cuadrof {
-    
-
+    flex: 1 1 18%;            /* 5 columnas ≈ 20% cada una, restando gap */
     border: 2px solid #333;
     background-color: white;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    padding: 10px;
+    padding: 2%;              /* proporcional */
     box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
     text-align: center;
+    box-sizing: border-box;
 }
 
 .cuadrof img {
-    width: 200px;
-    height: 200px;
+    width: 80%;               /* proporcional al cuadro */
+    height: auto;             /* mantiene proporción */
     object-fit: cover;
-    margin-bottom: 10px;
+    margin-bottom: 5%;
 }
 
 .cuadrof h2 {
-    font-size: 18px;
+    font-size: 1em;           /* relativo */
     margin: 0;
     color: #333;
 }
 
 .cuadrof p {
-    font-size: 14px;
+    font-size: 0.9em;         /* relativo */
     color: #555;
     margin: 5px 0 0 0;
 }
 
+/* --- Responsive --- */
 @media (max-width: 480px) {
+    .contenedorLogo img {
+        max-width: 40%;       /* logo más chico en celu */
+    }
+
+    .cuadrof {
+        flex: 1 1 18%;        /* mantiene 5 columnas pero más chicas */
+        padding: 1%;
+    }
+
     .cuadrof img {
-        width: 40%;   /* más chico proporcional */
-        height: auto; /* mantiene proporción */
+        width: 60%;           /* imágenes más chicas */
     }
 
     .cuadrof h2 {
-        font-size: 0.8em; /* relativo al tamaño base */
+        font-size: 0.8em;
     }
 
     .cuadrof p {
