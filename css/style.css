@@ -59,8 +59,8 @@ body {
 .contenedorf {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    gap: 40px;          /* mismo espacio horizontal y vertical */
-    padding: 10px;
+    gap: 20px;          /* mismo espacio horizontal y vertical */
+    padding: 0px;
     grid-auto-rows: 280px;
 }
 
