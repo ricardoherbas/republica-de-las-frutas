@@ -99,23 +99,22 @@ body {
 
 @media (max-width: 480px) {
     .contenedorf {
-        grid-auto-rows: minmax(200px,auto);   /* deja que el contenido defina la altura */
+        grid-template-columns: repeat(5, 80px); /* columnas más chicas */
+        grid-auto-rows: 150px; /* filas más bajas */
+        gap: 10px;             /* menos espacio entre cuadros */
+        overflow-x: auto;      /* permite scroll horizontal si no entra */
     }
 
     .cuadrof img {
-        width: 80px;
-        height: 80px;
-    }
-
-    .cuadrof {
-        padding: 5px;
+        width: 70px;
+        height: 70px;
     }
 
     .cuadrof h2 {
-        font-size: 14px;
+        font-size: 12px;
     }
 
     .cuadrof p {
-        font-size: 11px;
+        font-size: 10px;
     }
 }
