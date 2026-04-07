@@ -99,7 +99,7 @@ body {
 
 @media (max-width: 480px) {
     .contenedorf {
-        grid-auto-rows: auto;   /* deja que el contenido defina la altura */
+        grid-auto-rows: minmax(200px,auto);   /* deja que el contenido defina la altura */
     }
 
     .cuadrof img {
