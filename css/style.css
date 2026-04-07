@@ -59,9 +59,9 @@ body {
 .contenedorf {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    gap: 20px;          /* mismo espacio horizontal y vertical */
-    padding: 0px;
-    grid-auto-rows: 280px;
+    gap: 2%;              /* espacio relativo */
+    padding: 1%;          /* padding relativo */
+    grid-auto-rows: auto; /* altura automática */
 }
 
 .cuadrof {
@@ -97,3 +97,17 @@ body {
     margin: 5px 0 0 0;
 }
 
+@media (max-width: 480px) {
+    .cuadrof img {
+        width: 40%;   /* más chico proporcional */
+        height: auto; /* mantiene proporción */
+    }
+
+    .cuadrof h2 {
+        font-size: 0.8em; /* relativo al tamaño base */
+    }
+
+    .cuadrof p {
+        font-size: 0.7em;
+    }
+}
