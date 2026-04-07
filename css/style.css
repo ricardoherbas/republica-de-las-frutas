@@ -59,12 +59,14 @@ body {
 .contenedorf {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    gap: 40px;
+    gap: 40px;          /* mismo espacio horizontal y vertical */
     padding: 10px;
-    grid-auto-rows: 280px; /* PC */
+    grid-auto-rows: 280px;
 }
 
 .cuadrof {
+    
+
     border: 2px solid #333;
     background-color: white;
     display: flex;
@@ -95,20 +97,9 @@ body {
     margin: 5px 0 0 0;
 }
 
-/* --- Responsive: mismo layout pero más chico --- */
 @media (max-width: 480px) {
-    .contenedorLogo img {
-        max-width: 180px;
-    }
-
     .contenedorf {
-        grid-template-columns: repeat(5, 1fr); /* mantiene 5 columnas */
-        grid-auto-rows: 180px; /* más chico pero igual estructura */
-        gap: 15px;
-    }
-
-    .cuadrof {
-        padding: 5px;
+        grid-auto-rows: minmax(200px,auto);   /* deja que el contenido defina la altura */
     }
 
     .cuadrof img {
@@ -116,11 +107,15 @@ body {
         height: 80px;
     }
 
+    .cuadrof {
+        padding: 5px;
+    }
+
     .cuadrof h2 {
-        font-size: 12px;
+        font-size: 14px;
     }
 
     .cuadrof p {
-        font-size: 10px;
+        font-size: 11px;
     }
 }
